@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Birsheleko Basic Military Training School — discipline, leadership, service, and excellence.">
+  <title>Birsheleko Basic Military Training School <br>የብርሸለቆ መሰረታዊ ውትድርና ማሰልጠኛ ት/ቤት</title>
+  <style>
+    :root{
+      --navy:#10243a; --navy2:#173b35; --green:#1d6b45; --gold:#f2bd42;
+      --red:#c83b3b; --cream:#fffaf0; --ink:#1d2935; --muted:#647180;
+      --white:#fff; --shadow:0 14px 35px rgba(16,36,58,.13); --radius:20px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    .topbar{background:var(--navy);color:#e9f1ef;padding:8px 5%;font-size:.86rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .topbar strong{color:var(--gold)}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 3px 18px rgba(0,0,0,.07)}
+    .nav{max-width:1200px;margin:auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
+    .crest{width:48px;height:48px;display:grid;place-items:center;background:linear-gradient(145deg,var(--green),var(--navy2));color:var(--gold);border:3px solid var(--gold);clip-path:polygon(10% 0,90% 0,100% 20%,88% 76%,50% 100%,12% 76%,0 20%);font-size:1.4rem}
+    .brand b{display:block;color:var(--navy);font-size:.88rem;line-height:1.25;letter-spacing:.035em}
+    .brand small{display:block;color:var(--green);font-size:.60rem;letter-spacing:.12em;margin-top:5px}
+    .navlinks{display:flex;align-items:center;gap:22px;font-size:.92rem;font-weight:650}
+    .navlinks a:hover{color:var(--green)}
+    .navlinks .nav-cta{background:var(--green);color:white;padding:10px 16px;border-radius:999px}
+    .menu-btn{display:none;background:var(--navy);color:white;border:0;border-radius:10px;padding:9px 12px;font-size:1.2rem;cursor:pointer}
+    .hero{min-height:620px;position:relative;display:flex;align-items:center;color:white;overflow:hidden;background:
+      linear-gradient(90deg,rgba(9,27,34,.92) 0%,rgba(9,27,34,.77) 48%,rgba(9,27,34,.18) 100%),
+      url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=2000&q=85') center/cover}
+    .hero:after{content:"";position:absolute;bottom:0;left:0;right:0;height:8px;background:linear-gradient(90deg,var(--green) 0 33.3%,var(--gold) 33.3% 66.6%,var(--red) 66.6%)}
+    .hero-inner{position:relative;z-index:1;max-width:1200px;width:100%;margin:auto;padding:80px 24px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:.83rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:30px;height:3px;background:var(--gold)}
+    h1{font-size:clamp(2.5rem,6vw,5.1rem);line-height:1.06;max-width:800px;margin:22px 0}
+    h1 span{color:var(--gold)}
+    .hero p{max-width:610px;font-size:1.12rem;color:#e5eeee}
+    .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:13px 21px;border-radius:999px;font-weight:800;border:2px solid transparent;transition:.2s;cursor:pointer}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:var(--gold);color:var(--navy)}
+    .btn-outline{border-color:rgba(255,255,255,.75);color:white}
+    .hero-note{display:flex;gap:16px;align-items:center;margin-top:44px;color:#e7efed;font-size:.9rem}
+    .hero-note .line{width:48px;height:2px;background:var(--gold)}
+    .stats{max-width:1100px;margin:-42px auto 0;position:relative;z-index:2;padding:0 22px}
+    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);background:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .stat{padding:25px 18px;text-align:center;border-right:1px solid #e9edf0}
+    .stat:last-child{border:0}.stat b{display:block;font-size:1.45rem;color:var(--green)}.stat span{font-size:.9rem;color:var(--muted)}
+    section{padding:86px 24px}
+    .container{max-width:1160px;margin:auto}
+    .section-head{max-width:720px;margin-bottom:38px}
+    .kicker{color:var(--green);font-weight:850;letter-spacing:.15em;text-transform:uppercase;font-size:.78rem}
+    h2{font-size:clamp(2rem,4vw,3.15rem);line-height:1.15;color:var(--red);margin:10px 0 16px}
+    .section-head p,.about-copy p{color:var(--muted)}
+    .about{background:var(--cream)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+    .photo-stack{position:relative;padding:0 24px 24px 0}
+    .photo-stack img{height:430px;width:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .photo-stack:after{content:"";position:absolute;right:0;bottom:0;width:52%;height:46%;border:7px solid var(--gold);border-radius:var(--radius);z-index:0;pointer-events:none}
+    .photo-stack img{position:relative;z-index:1}
+    .quote-card{position:absolute;z-index:2;left:-16px;bottom:44px;background:var(--green);color:white;padding:19px 22px;border-radius:14px;max-width:250px;box-shadow:var(--shadow)}
+    .quote-card b{color:var(--gold);display:block;font-size:1.05rem}
+    .checklist{display:grid;gap:13px;margin:25px 0}
+    .checklist li{list-style:none;display:flex;gap:11px;align-items:flex-start}
+    .check{display:grid;place-items:center;flex:none;width:24px;height:24px;background:#e2f1e7;color:var(--green);border-radius:50%;font-weight:900}
+    .programs{background:white}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .program-card{padding:28px;border:1px solid #e8edf0;border-radius:var(--radius);background:white;box-shadow:0 7px 24px rgba(16,36,58,.05);transition:.25s}
+    .program-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .program-icon{width:58px;height:58px;border-radius:17px;display:grid;place-items:center;font-size:1.6rem;background:#e6f2e9;margin-bottom:22px}
+    .program-card:nth-child(2) .program-icon{background:#fff1cf}.program-card:nth-child(3) .program-icon{background:#fbe4e1}
+    .program-card h3{color:var(--navy);font-size:1.25rem;margin-bottom:10px}.program-card p{color:var(--muted);font-size:.95rem}
+    .program-card a{display:inline-block;color:var(--green);font-weight:800;margin-top:18px}
+    .values{background:linear-gradient(135deg,var(--navy),#174a3b);color:white}
+    .values h2{color:white}.values .section-head p{color:#d2e0dd}
+    .value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .value{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);padding:24px;border-radius:16px}
+    .value span{font-size:1.7rem}.value h3{color:var(--gold);margin:9px 0}.value p{font-size:.9rem;color:#d2e0dd}
+    .admissions{background:#f6f8f6}
+    .admission-grid{display:grid;grid-template-columns:1fr .85fr;gap:44px;align-items:start}
+    .steps{display:grid;gap:17px;margin-top:24px}
+    .step{display:flex;gap:16px;background:white;border-radius:15px;padding:19px;box-shadow:0 5px 18px rgba(16,36,58,.05)}
+    .step-no{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex:none;background:var(--gold);font-weight:900;color:var(--navy)}
+    .step h3{font-size:1.05rem;color:var(--navy)}.step p{font-size:.92rem;color:var(--muted)}
+    .notice{background:var(--navy);color:white;padding:30px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .notice h3{font-size:1.45rem;color:var(--gold);margin-bottom:12px}.notice p{color:#e1e8e8}.notice .btn{margin-top:20px}
+    .gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:190px 190px;gap:14px}
+    .gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:15px;transition:.25s}
+    .gallery-grid img:hover{transform:scale(1.02)}
+    .gallery-grid img:first-child{grid-row:span 2}
+    .news{background:var(--cream)}
+    .news-card{border-radius:18px;overflow:hidden;background:white;border:1px solid #ece8dd}
+    .news-card .news-img{height:190px;background:linear-gradient(135deg,#d9e8dc,#f5d989);display:grid;place-items:center;font-size:3rem}
+    .news-body{padding:22px}.date{font-size:.78rem;color:var(--green);font-weight:850;text-transform:uppercase;letter-spacing:.08em}.news-body h3{color:var(--navy);margin:8px 0}.news-body p{color:var(--muted);font-size:.92rem}
+    .contact{background:white}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px}
+    .contact-info{background:var(--navy);color:white;border-radius:var(--radius);padding:30px}
+    .contact-info h3{color:var(--gold);font-size:1.5rem;margin-bottom:12px}.contact-info p{color:#d9e3e4;margin-bottom:20px}
+    .contact-line{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.15)}.contact-line:last-child{border:0}
+    form{display:grid;gap:15px}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{display:block;font-size:.88rem;font-weight:750;color:var(--navy);margin-bottom:6px}
+    input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d6dfe1;border-radius:11px;font:inherit;background:#fbfcfc}
+    input:focus,select:focus,textarea:focus{outline:2px solid #a8d5b5;border-color:var(--green)}
+    textarea{min-height:130px;resize:vertical}
+    .form-message{color:var(--green);font-weight:700;display:none}
+    footer{background:#0b1927;color:#d9e1e2;padding:40px 24px 20px}
+    .footer-grid{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;padding-bottom:28px}
+    footer strong{color:white}footer p{font-size:.9rem;color:#b7c3c7;max-width:420px;margin-top:8px}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem}
+    .copyright{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;text-align:center;font-size:.82rem;color:#9eafb5}
+    .back-top{position:fixed;right:18px;bottom:18px;background:var(--gold);color:var(--navy);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:900;box-shadow:var(--shadow)}
+    @media(max-width:900px){
+      .navlinks{gap:13px;font-size:.85rem}.brand{min-width:190px}
+      .about-grid,.admission-grid,.contact-grid{grid-template-columns:1fr;gap:34px}
+      .cards{grid-template-columns:repeat(2,1fr)}.value-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}.gallery-grid img:first-child{grid-row:span 2}
+    }
+    @media(max-width:700px){
+      .topbar{justify-content:center;text-align:center}.nav{padding:10px 18px}.menu-btn{display:block}
+      .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:white;padding:18px 24px 24px;box-shadow:0 12px 20px rgba(0,0,0,.08);flex-direction:column;align-items:stretch}
+      .navlinks.open{display:flex}.navlinks a{padding:8px 0}.navlinks .nav-cta{text-align:center;padding:11px}
+      .hero{min-height:600px;background-position:58% center}.hero-inner{padding:65px 22px}.hero p{font-size:1rem}
+      .stat-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid #e9edf0;padding:16px}
+      section{padding:66px 20px}.cards{grid-template-columns:1fr}.value-grid{grid-template-columns:1fr 1fr}
+      .photo-stack img{height:330px}.quote-card{left:0;bottom:35px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 130px 130px}.gallery-grid img:first-child{grid-row:span 2}
+      .field-row{grid-template-columns:1fr}.footer-grid{flex-direction:column}
+    }
+    @media(max-width:420px){.brand b{font-size:.75rem}.brand small{font-size:.62rem}.crest{width:42px;height:42px}.value-grid{grid-template-columns:1fr}.gallery-grid{grid-template-rows:150px 110px 110px}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span>🇪🇹 <strong>Service • Discipline • Excellence</strong></span>
+    <span>Official school information and admissions</span>
+  </div>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Birsheleko school home">
+        <span class="crest" aria-hidden="true">★</span>
+        <span>BIRSHELEKO BASIC MILITARY TRAINING SCHOOL<br>የብርሸለቆ መሰረታዊ ውትድርና ማሰልጠኛ ት/ቤት<small>በታማኝነት ማገልገል</small></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="navlinks" id="navLinks">
+        <a href="#home">መነሻ ገፅ</a><a href="#about">ስለ እኛ</a><a href="#programs">ስልጠና</a>
+        <a href="#admissions">ምዝገባ እና ምልመላ</a><a href="#news">ዜና</a><a href="#contact" class="nav-cta">ያግኙን</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="eyebrow">Welcome to Birsheleko Basic Military Training School
+           እንኳን ወደ ብርሸለቆ መሰረታዊ ውትድርና ማሰልጠኛ ት/ቤት በደህና መጡ </div>
+        <h2>በዲስፕሊን የታነፁ ወታደሮችን እንገነባለን</h2>
+        <p>Aspiring to serve with courage, integrity, teamwork, and responsibility. Discover the values and training journey of Birsheleko Basic Military Training School.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#about">Discover Our School <span>→</span></a>
+          <a class="btn btn-outline" href="#admissions">Admissions Information</a>
+        </div>
+        <div class="hero-note"><span class="line"></span><span>Commitment to character, readiness, and service</span></div>
+      </div>
+    </section>
+
+    <div class="stats" aria-label="School highlights">
+      <div class="stat-grid">
+        <div class="stat"><b>ዲስፕሊን</b><span>Strong personal standards</span></div>
+        <div class="stat"><b>አመራር</b><span>Responsibility and teamwork</span></div>
+        <div class="stat"><b>አገልግሎት</b><span>Respect for community and country</span></div>
+      </div>
+    </div>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="photo-stack">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85" alt="Students learning and working together">
+          <div class="quote-card"><b>Our purpose</b>Prepare people to act with integrity, confidence, and respect.</div>
+        </div>
+        <div class="about-copy">
+          <div class="kicker">Who we are</div>
+          <h2>Character first. Service always.</h2>
+          <p>Birsheleko Basic Military Training School is presented here through a modern sample website designed to share school information, training values, announcements, and admissions guidance.</p>
+          <p style="margin-top:14px">Replace this sample introduction with the school's approved history, mission, leadership message, and official information before publishing.</p>
+          <ul class="checklist">
+            <li><span class="check">✓</span><span><strong>Integrity:</strong> act honestly and responsibly.</span></li>
+            <li><span class="check">✓</span><span><strong>Teamwork:</strong> learn to support and respect others.</span></li>
+            <li><span class="check">✓</span><span><strong>Professionalism:</strong> pursue continuous improvement.</span></li>
+          </ul>
+          <a class="btn btn-gold" href="#values">Explore Our Values →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs" id="programs">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Training & development</div>
+          <h2>Foundations for responsible service</h2>
+          <p>Use these sample cards to introduce approved courses and student development activities. Edit the descriptions to match the school's official curriculum.</p>
+        </div>
+        <div class="cards">
+          <article class="program-card"><div class="program-icon">🎯</div><h3>Discipline & Personal Development</h3><p>Build consistency, accountability, self-management, and respect for shared standards.</p><a href="#contact">Ask for information →</a></article>
+          <article class="program-card"><div class="program-icon">🤝</div><h3>Leadership & Teamwork</h3><p>Develop communication, cooperation, decision-making, and responsible leadership.</p><a href="#contact">Ask for information →</a></article>
+          <article class="program-card"><div class="program-icon">🏃</div><h3>Physical Readiness</h3><p>Support healthy habits, fitness awareness, resilience, and safe participation in physical activity.</p><a href="#contact">Ask for information →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="values" id="values">
+      <div class="container">
+        <div class="section-head"><div class="kicker" style="color:var(--gold)">What guides us</div><h2>Values that shape every step</h2><p>Our sample design highlights the principles that can guide a learning community.</p></div>
+        <div class="value-grid">
+          <div class="value"><span>🛡️</span><h3>Integrity</h3><p>Choose honesty and do what is right.</p></div>
+          <div class="value"><span>⭐</span><h3>Excellence</h3><p>Keep learning and give your best effort.</p></div>
+          <div class="value"><span>🌿</span><h3>Respect</h3><p>Treat people and communities with dignity.</p></div>
+          <div class="value"><span>🇪🇹</span><h3>Service</h3><p>Contribute responsibly to the public good.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="admissions" id="admissions">
+      <div class="container admission-grid">
+        <div>
+          <div class="kicker">Admissions</div><h2>Start with the right information</h2>
+          <p style="color:var(--muted)">For accurate admission requirements, dates, and eligibility, contact the school through its official channels. The steps below are general placeholders, not official requirements.</p>
+          <div class="steps">
+            <div class="step"><div class="step-no">01</div><div><h3>Review official announcements</h3><p>Check the latest approved notice for dates, eligibility, and required documents.</p></div></div>
+            <div class="step"><div class="step-no">02</div><div><h3>Prepare your documents</h3><p>Use only the document list provided by the authorized admissions office.</p></div></div>
+            <div class="step"><div class="step-no">03</div><div><h3>Contact the admissions office</h3><p>Confirm the application process and where to submit your information.</p></div></div>
+          </div>
+        </div>
+        <aside class="notice"><h3>Admissions notice</h3><p>Admission dates, eligibility rules, fees, and application procedures have not been verified for this sample site. Publish official details here only after confirmation from the school.</p><a href="#contact" class="btn btn-gold">Contact the School →</a></aside>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head"><div class="kicker">Life at school</div><h2>A place to learn and grow</h2><p>These are sample stock photos. Replace them with approved school photographs and obtain permission before publishing images of students or staff.</p></div>
+        <div class="gallery-grid">
+          <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1000&q=85" alt="Students collaborating in a learning environment">
+          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=85" alt="Group of students together">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=85" alt="Learning with technology">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=85" alt="Classroom learning">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=85" alt="Team activity outdoors">
+        </div>
+      </div>
+    </section>
+
+    <section class="news" id="news">
+      <div class="container">
+        <div class="section-head"><div class="kicker">News & announcements</div><h2>Latest from the school</h2><p>Example announcement cards. Update them with verified school news and real publication dates.</p></div>
+        <div class="cards">
+          <article class="news-card"><div class="news-img">📢</div><div class="news-body"><div class="date">Sample announcement</div><h3>Admissions information</h3><p>Check this section for official application notices, deadlines, and eligibility updates.</p></div></article>
+          <article class="news-card"><div class="news-img">🎓</div><div class="news-body"><div class="date">School update</div><h3>Student development</h3><p>Share approved updates about learning, leadership, and student activities.</p></div></article>
+          <article class="news-card"><div class="news-img">🏅</div><div class="news-body"><div class="date">Community news</div><h3>Achievements & events</h3><p>Celebrate verified milestones and community activities with permission.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head"><div class="kicker">Get in touch</div><h2>Contact Birsheleko Basic Military Training School</h2><p>Replace the placeholder details below with official contact information before launching the site.</p></div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>School information</h3><p>We welcome questions about official school information and admissions procedures.</p>
+            <div class="contact-line"><strong>📍 Location</strong><br>Amhara,West Gojjam, Ethiopia</div>
+            <div class="contact-line"><strong>✉️ Email</strong><br>gionbirhanu122@gmail.com</div>
+            <div class="contact-line"><strong>☎️ Telephone</strong><br>+251920887598</div>
+            <div class="contact-line"><strong>🕘 Office hours</strong><br>from MONDAY to FRIDAY 8:00 pm  ---5:00  am</div>
+          </div>
+          <form id="contactForm">
+            <div class="field-row">
+              <div><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required placeholder="Your full name"></div>
+              <div><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+            </div>
+            <div><label for="topic">Reason for contact</label><select id="topic" name="topic"><option>General information</option><option>Admissions question</option><option>School programs</option><option>Other</option></select></div>
+            <div><label for="message">Your message</label><textarea id="message" name="message" required placeholder="Write your message here..."></textarea></div>
+            <button class="btn btn-gold" type="submit">Send Message →</button>
+            <p class="form-message" id="formMessage" role="status">Your email app should open with a prepared message if configured. This demo does not send or store form submissions.</p>
+            <small style="color:var(--muted)">Demo form: connect a secure form service or school server before collecting real submissions.</small>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div><strong>BIRSHELEKO BASIC MILITARY TRAINING SCHOOL</strong><p>A sample website celebrating discipline, leadership, respect, and service.</p></div>
+      <div class="footer-links"><a href="#about">About</a><a href="#programs">Training</a><a href="#admissions">Admissions</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Birsheleko Basic Military Training School. Sample template — The Website designed BY Birhanu adera.</div>
+  </footer>
+  <a class="back-top" href="#home" aria-label="Back to top">↑</a>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.textContent = open ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const topic = document.getElementById('topic').value;
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Website inquiry: ' + topic);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nTopic: ' + topic + '\n\nMessage:\n' + message);
+      document.getElementById('formMessage').style.display = 'block';
+      // Replace school@example.com with the school's real, approved email address.
+      // Uncomment the next line after adding the official email:
+      // window.location.href = 'mailto:school@example.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
